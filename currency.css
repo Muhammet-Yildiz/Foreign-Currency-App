@@ -1,0 +1,288 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+}
+
+.top-section {
+    background-color: rgb(4, 4, 116);
+    width: 100%;
+    position: relative;
+    height: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.titleWrap {
+    position: relative;
+    margin-top: 4rem;
+    height: 150px;
+}
+
+.titleWrap h1 {
+    font-family: 'Do Hyeon', sans-serif;
+    letter-spacing: 1px;
+    font-size: 2.4rem;
+}
+
+.titleWrap p {
+    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 450;
+    margin-top: 18px;
+    font-size: 17px;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+.mainTabContainer {
+    position: fixed;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1000px;
+    padding: 3rem;
+    height: auto;
+    border-radius: 8px;
+    z-index: 99;
+    background-color: white;
+}
+
+.currencyWrap {
+    display: flex;
+    position: relative;
+    height: 120px;
+}
+
+.changeCurrency {
+    display: flex;
+    align-items: center;
+    width: auto;
+    justify-content: center;
+    position: relative;
+    padding-top: 5px;
+    margin: 0 18px;
+}
+
+.changeCurrency svg {
+    border: rgb(221, 221, 221) solid 2px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding: 0.9rem;
+    color: rgb(0, 108, 224);
+    cursor: pointer;
+}
+
+.currencyWrap .Amount_Field,
+.From_Field,
+.To_Field {
+    width: 270px;
+    position: relative;
+}
+
+.Amount_Field {
+    margin-right: 20px;
+}
+
+.currencyWrap h3 {
+    display: block;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+    padding-left: 2px;
+}
+
+.select {
+    color: rgb(179, 179, 179);
+    padding-left: 4px;
+    width: 100%;
+}
+
+.AmountInput,
+.dropdown {
+    width: 100%;
+    height: 50px;
+    border: 2px solid rgb(204, 204, 204);
+    outline: 0;
+    font-size: 1rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: rgb(39, 39, 39);
+    position: relative;
+    border-radius: 6px;
+}
+
+.AmountInput {
+    padding-left: 12px;
+    font-family: 'Mukta';
+    font-weight: 600;
+}
+
+.AmountInput:focus {
+    border: 1px solid rgb(4, 4, 116);
+}
+
+.brlight {
+    border: 2px solid rgb(4, 4, 116);
+}
+
+.dropdown {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    font-weight: 600;
+    font-family: 'Mukta';
+}
+
+.dropdown .dropdown-select {
+    padding-left: 12px;
+    padding-right: 12px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    width: 100%;
+    cursor: pointer;
+    position: relative;
+    align-items: center;
+}
+
+.dropdown .dropdown-select svg {
+    margin-right: 0.6rem;
+}
+
+.bi-chevron-down {
+    position: absolute;
+    right: 9px;
+    top: 17px;
+}
+
+span.selected {
+    margin-left: 9px;
+    margin-right: 11px;
+    font-size: 0.9rem;
+}
+
+.dropdown .dropdown-list {
+    display: none;
+    position: absolute;
+    overflow-y: scroll;
+    top: 58px;
+    height: 298px;
+    width: 268px;
+    left: -1px;
+    z-index: 99;
+    background-color: white;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    box-shadow: 0 0 10px 1px rgb(226, 226, 226);
+}
+
+.dropdown-list .dropdown-list_item {
+    padding: 0.6rem 0.7rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-list .dropdown-list_item:hover {
+    background-color: rgb(4, 4, 116);
+}
+
+.dropdown-list .dropdown-list_item:hover small {
+    color: white;
+}
+
+.dropdown-list .dropdown-list_item svg {
+    margin-right: 8px
+}
+
+.alertMessage {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: rgb(170, 2, 2);
+    font-size: 0.8rem;
+    margin-top: 6px;
+    display: none;
+    padding-left: 1px;
+}
+
+.currency-converter__SubmitZone {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.currency-converter__SubmitZone p {
+    font-family: sans-serif;
+    font-size: 0.9rem;
+    display: flex;
+    width: auto;
+    align-items: center;
+}
+
+.currency-converter__SubmitZone p svg {
+    margin-bottom: 1px;
+}
+
+.currency-converter__SubmitZone button {
+    border: none;
+    padding: 0.8rem 1.3rem;
+    margin-right: 1rem;
+    background-color: #0067d4;
+    border-radius: 8px;
+    color: white;
+    font-family: 'Noto Sans TC', sans-serif;
+    transition: 150ms ease;
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+    font-weight: bold;
+}
+
+.currency-converter__SubmitZone button:hover {
+    background-color: #459efd;
+    box-shadow: 0 2px 5px 1px rgb(165, 165, 165);
+}
+
+.responseEmp {
+    /* height: 130px; */
+    height: 0;
+    display: none;
+    margin-top: 16px;
+    margin-bottom: 15px;
+    justify-content: space-between;
+    position: relative;
+}
+
+.responseEmp .Convert_Amount {
+    font-size: 1.2rem;
+    font-family: 'Pangolin', cursive;
+    opacity: 1;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.responseEmp .result_amount {
+    margin-top: 9px;
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    font-family: 'Pangolin', cursive;
+    color: darkblue;
+}
+
+.responseEmp .unit_rates {
+    font-family: 'Mukta';
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: rgb(92, 92, 92);
+    height: 100%;
+    line-height: 42px;
+    letter-spacing: 0.5px;
+    width: 35%;
+}
