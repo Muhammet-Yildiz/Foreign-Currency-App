@@ -6,10 +6,12 @@
 
 body {
     width: 100%;
+     background-color: rgb(4, 4, 116);
+
 }
 
 .top-section {
-    background-color: rgb(4, 4, 116);
+ 
     width: 100%;
     position: relative;
     height: 100%;
